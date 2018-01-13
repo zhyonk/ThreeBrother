@@ -1,9 +1,9 @@
 <component name="libraryTable">
   <library name="weixin4j-0.0.9">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/src/main/resources/weixin4j-0.0.9.jar!/" />
-    </CLASSES>
-    <JAVADOC />
+    <CLASSES />
+    <JAVADOC>
+      <root url="https://gitee.com/weixin4j/weixin4j/blob/master/weixin4j-0.0.9.jar" />
+    </JAVADOC>
     <SOURCES />
   </library>
 </component>
