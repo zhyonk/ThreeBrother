@@ -45,19 +45,20 @@ public class HomeController {
             logger.info(s);
         }
         List<SingleButton> button_list = new ArrayList<SingleButton>();
-        button_list.add(new ViewButton("测试","http://localhost:8080/maven-SpringMVC/home/test"));
+        button_list.add(new ViewButton("测试","http://zhyonk.tunnel.echomod.cn/maven-SpringMVC/home/test"));
+        button_list.add(new ViewButton("游戏","http://zhyonk.tunnel.echomod.cn/maven-SpringMVC/home/game1"));
         menu.setButton(button_list);
         weixin.createMenu(menu);
         logger.info(String.valueOf(weixin));
         //返回一个index.jsp这个视图
         return "index";
     }
-    @RequestMapping("/test")
+    @RequestMapping("/game1")
     public  String test() throws WeixinException {
         //输出日志文件
         logger.info("点击测试");
 
         //返回一个index.jsp这个视图
-        return "index";
+        return "game1";
     }
 }
