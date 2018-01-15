@@ -51,12 +51,44 @@
         <load-on-startup>1</load-on-startup>
         <async-supported>true</async-supported>
     </servlet>
+
     <servlet-mapping>
         <servlet-name>springMVC</servlet-name>
         <!-- 此处也可以配置成 *.do 形式 -->
         <url-pattern>/</url-pattern>
+        <url-pattern>*.woff</url-pattern>
+        <url-pattern>*.gif</url-pattern>
+        <url-pattern>*.png</url-pattern>
+        <url-pattern>*.jpg</url-pattern>
+        <url-pattern>*.js</url-pattern>
+        <url-pattern>*.css</url-pattern>
+        <url-pattern>*.xml</url-pattern>
+        <url-pattern>*.html</url-pattern>
+        <url-pattern>*.chm</url-pattern>
+        <url-pattern>*.gz</url-pattern>
+        <url-pattern>*.txt</url-pattern>
+        <url-pattern>*.ttf</url-pattern>
+        <url-pattern>*.woff2</url-pattern>
+        <url-pattern>*.eot</url-pattern>
+        <url-pattern>*.svg</url-pattern>
+        <url-pattern>*.swf</url-pattern>
+        <url-pattern>*.jst</url-pattern>
+
     </servlet-mapping>
 
+    <!-- 配置shiro的核心拦截器 -->
+    <filter>
+        <filter-name>shiroFilter</filter-name>
+        <filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>shiroFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+        <dispatcher>REQUEST</dispatcher>
+        <dispatcher>FORWARD</dispatcher>
+        <dispatcher>INCLUDE</dispatcher>
+        <dispatcher>ERROR</dispatcher>
+    </filter-mapping>
     <filter>
         <description>微信消息接入接口</description>
         <filter-name>WeixinUrlFilter</filter-name>

@@ -67,7 +67,7 @@
 			form.on('submit(login)', function(data) {
 				$.ajax({
 					  type: 'POST',
-					  url: '<%=basePath%>login',
+					  url: '<%=basePath%>admin/user/login.do',
 					  async:false,
 					  data: data.field,
 					  dataType:'html',
